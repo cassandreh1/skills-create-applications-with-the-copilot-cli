@@ -59,7 +59,7 @@ describe('calculator', () => {
     });
   });
 
-  describe('exponentiation', () => {
+  describe('exponentiation (power)', () => {
     test('calculates the image example 2 ^ 3', () => {
       expect(calculate(2, '^', 3)).toBe(8);
     });
