@@ -71,6 +71,18 @@ describe('calculator', () => {
     test('supports negative exponents', () => {
       expect(calculate(2, '^', -2)).toBe(0.25);
     });
+
+    test('returns one for any non-zero base raised to zero', () => {
+      expect(calculate(-7, '^', 0)).toBe(1);
+    });
+
+    test('handles a zero base with a positive exponent', () => {
+      expect(calculate(0, '^', 3)).toBe(0);
+    });
+
+    test('supports negative bases with integer exponents', () => {
+      expect(calculate(-2, '^', 3)).toBe(-8);
+    });
   });
 
   describe('square root', () => {
